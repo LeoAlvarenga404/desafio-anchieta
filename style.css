@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased
+}
+
+:root {
+  /* Ajuste de medida. 1rem = 10px */
+  font-size: 62.5%;
+
+  /* Cores primárias  */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  /* Cores neutras */
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+ 
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+
+.logo {
+  width: 4.8rem;
+}
+
+nav ul {
+  display: none;
+  list-style: none;
+}
+
+nav.active {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  background-color: hsla(240, 100%, 5%, 0.7);
+}
+
+nav ul.active {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  opacity: 1;
+  display: flex;
+  justify-content: start;
+  padding:10rem 0 0 2rem;
+  flex-direction: column;
+  
+  gap: 3.2rem;
+  top: 0;
+  right: 0;
+  background-color: var(--off-white);
+}
+
+nav ul li a {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  color: var(--very-dark-blue);
+}
+
+nav ul li a:hover {
+  color: var(--soft-red);
+}
+
+.menu {
+  position: absolute;
+  top: 3.4rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+
+.hero-container, .text-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+
+.hero-container .img-hero img {
+  width: 100%;
+  min-width: 20rem;
+}
+
+.hero-container .text-hero h1 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  max-width: 30rem;
+}
+
+.text-hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-hero div:nth-child(2){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.hero-container .text-hero p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: var(--dark-grayish-blue);
+  width: 100%;
+  max-width: 30rem;
+  min-width: 25rem;
+}
+
+
+.hero-container .text-hero button {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  padding: 1.2rem 2.4rem;
+  max-width: 16rem;
+  margin-top: 2rem;
+  border: none;
+  color: var(--off-white);
+  background: var(--soft-red);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero-container .text-hero button:hover {
+  background: var(--very-dark-blue);
+}
+
+.new-container {
+  background: var(--very-dark-blue);
+  padding: 2rem;
+}
+
+.new-container h2 {
+  font-size: 3.2rem;
+  color: var(--soft-orange);
+}
+.new-container .news {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.new-container .news .new {
+  padding-block: 3rem;
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.new-container .news .new:nth-child(3) {
+  padding-bottom: 0;
+  border: none;
+}
+
+.new-container .news .new h4 a{
+  color: var(--off-white);
+  cursor: pointer;
+}
+
+.new-container .news .new h4 a:hover {
+  color: var(--soft-orange);
+}
+
+.new-container .news .new p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: var(--grayish-blue);
+  margin-top: 1rem;
+}
+
+.figures {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.figures article{
+  display: flex;
+  align-items: center;
+  
+  gap: 1.6rem;
+}
+
+.figures article .article-img1 {
+  background-image: url(assets/image-retro-pcs.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  max-width: 8rem;
+  height: 10rem;
+}
+.figures article .article-img2 {
+  background-image: url(assets/image-top-laptops.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  max-width: 8rem;
+  height: 10rem;
+}
+.figures article .article-img3 {
+  background-image: url(assets/image-gaming-growth.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  max-width: 8rem;
+  height: 10rem;
+}
+
+.figures article img {
+  width: 100%;
+  width: 100%;
+  max-width: 8rem;
+  height: auto;
+  overflow: hidden;
+}
+
+.figures article .figure-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.figures article .figure-content span {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--grayish-blue);
+}
+
+.figures article .figure-content strong {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+  transition: color 0.2s;
+  cursor:pointer;
+}
+
+.figures article .figure-content strong:hover {
+  color: var(--soft-red);
+
+}
+
+.figures article .figure-content p {
+  color: var(--dark-grayish-blue);
+}
+
+.atribution {
+  font-size: 1.1rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.atribution  a {
+   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 5rem 7rem;
+  }
+  .logo {
+    width: 6.4rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  nav.active {
+    
+    position: relative;
+    display: flex;
+    
+    opacity: 1;
+    background-color: transparent;
+  }
+
+  nav ul, nav ul.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 3.2rem;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  nav ul li a, nav ul li a.active {
+    display: flex;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--dark-grayish-blue);
+  }
+  .hero {
+    gap: 2rem;
+  }
+  
+  .hero-container .text-hero h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+    width: 30rem;
+   
+  }
+  .hero, .text-hero {
+    flex-direction: row;
+  }
+  
+  .figures {
+    grid-template-columns: repeat(3, 1fr);
+    
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1048px){
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .new-container h2 {
+    text-align: center;
+  }
+
+  .new-container .news {
+    flex-direction: row;
+    gap: 2rem;
+    padding-right: 2rem;
+  }
+  .new-container .news .new {
+    border-right: 1px solid var(--dark-grayish-blue);
+    border-bottom: none;
+
+  }
+}
+
